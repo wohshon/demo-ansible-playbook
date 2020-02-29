@@ -14,5 +14,14 @@
   become: true
   hosts: ansible
   roles:
-    - patch
+    - install
+  tags: install
+
+- name: install httpd
+  remote_user: virtuser
+  become: true
+  hosts: ansible
+  roles:
+    - cleanup
+  tags: cleanup
 
