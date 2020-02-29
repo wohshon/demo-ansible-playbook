@@ -1,0 +1,8 @@
+- name: remove httpd
+  debug:
+    msg: "remove httpd"
+
+- name: remove the latest version of Apache
+  yum:
+    name: httpd
+    state: absent
